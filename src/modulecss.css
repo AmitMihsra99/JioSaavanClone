@@ -1,0 +1,13 @@
+.search-bar{
+    width:33%;
+    min-height:4.88%;
+    margin-top:2.66%;
+    margin-left:5.55%;
+    background-color:#ffffff;
+    border:1px solid #dadada;
+    border-radius:20px;
+    outline:none;
+    float:right;
+    padding-left:30px;
+    padding-right:30px;
+}

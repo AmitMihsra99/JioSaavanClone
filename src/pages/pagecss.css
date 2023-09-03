@@ -1,0 +1,804 @@
+
+
+/* -------------------------- Side bar--------------------*/
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin-top:85px;
+  width: 130px;
+  height: 75%;
+   /* Adjust as needed */
+  background-color:#fff;
+  /* border-right: 1px solid #2d2727; */
+  /* overflow-y:scroll; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.head{
+  font-size: small;
+  
+  color:#7e5289;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  margin-bottom: 8px;
+   text-decoration: none;
+}
+.linksbar{
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  &:hover{
+    color:#f0f0f0;
+  }
+}
+.sidebarbtn{
+  border: 1px solid lightgreen;
+  padding: 6px 18px;
+  border-radius: 25px;
+ font-weight: 600;
+ color: #4285f4;
+ cursor: pointer;
+ &:hover{
+  color: #0a0303;
+  background-color: #f32c6e;
+ }
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .drawer {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+  }
+  .section {
+    max-height: none; /* Reset max height for smaller screens */
+  }
+  
+
+}
+@media (max-width: 1050px) {
+  .drawer {
+    display: none;
+  }
+}
+
+
+/* -------------------------- Side bar end --------------------*/
+
+
+.music-popup {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 8;
+  display: none;
+}
+
+.music-link:hover + .music-popup,
+.music-popup:hover {
+  display: block;
+}
+
+/* Cards Container Styles */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(33.33% - 20px);
+  text-decoration: none;
+  color: inherit;
+}
+.card-header {
+  background-color: #4285f4;
+  color: white;
+  padding: 5px 10px;
+}
+
+.card-head {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  font-size: 16px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .music-popup {
+    top: 40px;
+    right: 10px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+/* GoPro Navbar Styles */
+.gopro-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.gopro-navbar-logo {
+  position: relative;
+  left: 12%;
+  font-size: 18px;
+}
+
+.gopro-navbar-links {
+  position: relative;
+  left: -15%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+
+.RedeemLink {
+  background-color: #060101;
+  padding: 5px 22px 8px 22px;
+  border-radius: 25px;
+  border: 1px solid seashell;
+}
+
+.gopro-navbar-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.gopro-navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.gopro-bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+  .gopro-navbar-links {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 250px;
+    width: 50%;
+    height: 30%;
+    background-color: #2a2929;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gopro-navbar-links.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gopro-navbar-hamburger {
+    display: flex;
+  }
+}
+
+.container {
+ background-color: rgb(10, 4, 4);
+  color: white;
+  margin-top: 19px;
+  box-sizing: border-box;
+  padding:0px; 
+
+}
+.textcontainer {
+  margin-top: -20px;
+  color: white;
+  padding: 20px 35px ;
+  box-sizing: border-box;
+  
+}
+
+.textcontainer h1 {
+  font-size: 21px;
+  margin-bottom: 30px;
+}
+
+.textcontainer p {
+  font-size: 35px;
+  line-height: 2.1;
+  font-style: italic;
+}
+.textcontainer-p{
+  color: rgba(16, 251, 130, 0.995);
+} 
+.textcontainer-h1{
+  text-decoration: underline;
+  font-weight: 800;
+} 
+
+
+
+
+@media (min-width: 768px) {
+  .textcontainer h1 {
+    font-size: 32px;
+  }
+
+  .textcontainer p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .textcontainer h1 {
+    font-size: 48px;
+  }
+
+  .textcontainer p {
+    font-size: 20px;
+  }
+}
+/*  ************************* Basic styles card container ************************************/ 
+
+
+.gorpo-card-section {
+  margin-top: -18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.sed-head-content{
+   font-size: 25px;
+}
+.therd-head-content{
+  font-size: 20px;
+}
+
+
+.gorpo-card {
+  
+  position: relative;
+  flex: 1;
+  background-color: #f0f0f0;
+  color: #060101;
+  border: 1px solid #ccc;
+  margin: 20px;
+  padding: 36px;
+  transition: all 0.3s ease-in-out; /* Add transition for smooth size changes */
+  font-size:xx-large; 
+  
+}
+.cardd-1{
+  background-color: rgb(18, 223, 158);
+  color: #f0f0f0; 
+ 
+}
+.cardd-2{
+  background-color: #2a2929;
+  color: #f0f0f0;
+}
+.radiobutton{
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+/* styles.css */
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  align-items: center;
+  
+}
+
+.radio-label {
+ 
+  margin-bottom:8px;
+  font-size:1.5rem;
+  font-weight: 600;
+ 
+}
+
+.radio-input {
+  margin-right:8px;
+  width: 35px;
+  height: 25px;
+}
+
+/* Adjust the styles for responsiveness */
+
+@media (max-width: 1044px) {
+  gorpo-card {
+  
+    position: relative;
+    flex: 1;
+    background-color: #f0f0f0;
+    color: #060101;
+    border: 1px solid #ccc;
+   
+    padding: 2px;
+    transition: all 0.3s ease-in-out; /* Add transition for smooth size changes */
+    font-size:medium; 
+    
+  }
+
+
+}
+@media (max-width: 768px) {
+  .radio-group {
+    align-items: center;
+    font-size: medium;
+  }
+}
+
+@media (max-width: 1310px) {
+  .radio-group {
+    align-items: center;
+  }
+}
+
+
+
+.gorpo-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.45rem;
+  font-weight: bold;
+  color: rgba(244, 245, 233, 0.851);
+}
+
+.check-button {
+  border: none;
+  background-color: #4285f4;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.gpcardbtn{
+    width: 40%;
+   font-size:xx-large;
+   padding: 6px 22px;
+   border: 1px solid lightgreen;
+   border-radius: 25px;
+    &:hover{
+      background-color: #060101;
+      color:#f0f0f0;
+    }
+}
+/* styles.css for payment button */
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.radio-label {
+  margin-bottom: 8px;
+}
+
+.radio-input {
+  margin-right: 8px;
+}
+
+/* Adjust the styles for responsiveness */
+
+@media (max-width: 768px) {
+  .radio-group {
+    align-items: center;
+  }
+  .gpcardbtn{
+    font-size: x-large;
+  }
+}
+
+
+/* Media queries for responsiveness */
+
+@media (min-width: 576px) {
+  .gorpo-card {
+    flex-basis: calc(50% - 20px);
+  }
+  .gpcardbtn{
+    font-size:medium;
+  }
+}
+
+@media (min-width: 992px) {
+  .gorpo-card {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .gorpo-card {
+    flex-basis: calc(25% - 20px);
+  }
+  
+  /* Adjust card size for larger screens */
+  @media (min-width: 1600px) {
+    .gorpo-card {
+      flex-basis: calc(20% - 20px);
+      padding: 40px; /* Increase padding for larger card */
+    }
+  }
+}
+
+/*  ************************* Basic styles card container ************************************/ 
+
+
+/*----------------------------Mini Bar---------------------*/
+
+.back-color{
+  background-color: #060101;
+  min-height: 20vh;
+
+}
+.mini-navbar {
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0303;
+  color: white;
+  padding: 20px 20px;
+  margin: -10px;
+  font-style: italic;
+   font-size: 2rem;
+  height: 50px; 
+}
+
+
+.mini-navbar-left {
+position: relative;
+  flex: 1;
+  right: -15%;
+  color: #fff;
+  cursor: pointer;
+ 
+}
+
+.mini-navbar-right{
+  position: relative;
+  display: flex;
+  align-items: center;
+  right: 18%;
+  gap: 35px;
+  color: coral;
+}
+
+.mini-navbar-right span {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+
+.popup-container {
+  position: relative;
+  display: inline-block;
+}
+
+.popup-button {
+  background-color: #555;
+  color: rgb(233, 233, 238);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.popup-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform:translateX(-50%);
+  background-color: #8b7575;
+  color: rgb(240, 232, 232);
+  padding: 10px;
+  width: 250px;
+  height: 80px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: small;
+  line-height: 1rem;
+  font-style: normal;
+  
+  
+}
+
+@media (max-width: 756px) {
+  .mini-navbar {
+    margin-top: -10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0303;
+    color: white;
+    padding: 20px 20px;
+    margin: -10px;
+    font-style: italic;
+     font-size: 1.08rem;
+    height: 50px; 
+  }
+  
+    
+}
+@media (min-width: 1100px) {
+  .mini-navbar {
+    margin-top: -10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0303;
+    color: white;
+    padding: 6px 10px;
+    margin: -10px;
+    font-style: italic;
+     font-size: 2.0rem;
+    height: 50px; 
+  }
+  .mini-navbar-left {
+    position: relative;
+      flex: 1;
+      right: -10%;
+    }
+    
+    .mini-navbar-right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      right: 15%;
+      gap: 25px;
+    }
+}
+@media (max-width: 1103px ) {
+  .mini-navbar-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    right: 15%;
+    gap: 25px;
+    margin-bottom: -20%;
+  }
+}
+
+/*----------------------------Mini Bar---------------------*/
+
+
+
+ /*-----------------------------Square Box Conatainer-------------------------------- */
+
+ .box-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 22px ;
+  align-items: center;
+  min-height: 20vh;
+  background-color:#fff;
+
+}
+
+.background-box {
+  margin-top: -38px;
+  background-color: #fff9f9ec;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 80%;
+  
+}
+
+.box-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.box-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.box-card img {
+  
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  
+}
+.image-container {
+  background-color:#fff;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 35px;
+  margin: -30px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.image-container-btn{
+   background-color: rgba(91, 228, 157, 0.951);
+   font-size: large;
+   border: none;
+   border-radius: 25px;
+   padding: 6px 22px;
+   font-weight: 800;
+   color: #fff;
+   cursor: pointer;
+   &:hover{
+    background-color: lightgreen;
+    color: #000;
+   }
+  }
+
+.image-container img {
+  
+  max-width: 100%;
+  height: auto;
+  display: block;
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  .box-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+
+  /*-----------------------------Square Box Conatainer-------------------------------- */
+
+
+
+  /* ---------------------------------Footer styles-------------------------------- */
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.fotter-logo {
+  flex: 3;
+}
+
+.fotter-logo img {
+  max-width: 50px; /* Adjust the size as needed */
+  border-radius: 100px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+  max-width: calc(25% - 20px);
+  text-align: center;
+  justify-content: center;
+  
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.footer-section a {
+  color: rgb(194, 186, 186);
+  text-decoration: none;
+  font-size: 15px;
+  justify-content: center;
+   &:hover{
+     color: #8b7575;
+     text-decoration: underline;
+   }
+
+}
+
+
+
+.social-icons a {
+  background-color: #f32c6e;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-text {
+  flex: 1;
+  display: flex;
+  flex-direction:column-reverse;
+  align-items: flex-end;
+  text-align: right;
+  width: 100%;
+}
+
+.footer-text p {
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 490px) {
+    
+  .footer{
+    width: 100%;
+  }
+    
+  }
+
+  @media screen and (max-width: 590px) {
+    
+    .footer{
+      width: 100%;
+    }
+      
+    }
+  
