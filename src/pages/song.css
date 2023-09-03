@@ -38,7 +38,7 @@
   }
   .songList-music
   {
-   width: 30%;
+   width: 40%;
   }
   
   /* Media query for responsiveness */
@@ -49,24 +49,29 @@
     }
   
     .songList-right-side {
-      margin-left: 0;
-      margin-top: 20px;
-    }
-  }
-  @media screen and (max-width: 487px) {
-    .songList-responsive-section {
-      width: 100%;
-    }
-  
-    .songList-right-side {
-      margin-left: 0;
+      margin-left: 5px;
       margin-top: 20px;
     }
   }
 
+  @media screen and (min-width:500) {
+    .songList-responsive-section {
+     width: 250px;
+       
+
+
+      
+    }
+  
+    .songList-right-side {
+      margin-left: 0px;
+      margin-top: 20px;
+    }
+  }
+  
   @media screen and (max-width: 1050px) {
     .songList-responsive-section {
-      width: 80%;
+      width: 100%;
     }
   
     .songList-right-side {

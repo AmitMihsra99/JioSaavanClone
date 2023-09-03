@@ -35,7 +35,7 @@
   position: relative;
   display:flex;
   align-items:center;  
-  left: -35px; 
+  left: -5%; 
 }
 
 .links {
@@ -149,7 +149,7 @@ padding: 25px;
   align-items: center;
   right: 2%;
   cursor: pointer;
-  width: 200px;
+  width: 300px;
 }
 
 }
@@ -264,15 +264,15 @@ padding: 25px;
           position: relative;
           display:flex;
           align-items:center;  
-           left: -85px;
+           left: -75px;
         }
         .links{
           position: relative;
-          left: 25px;
+          left: 10%;
         }
         .right-side{
           position: relative;
-          left: 25px;
+          left: 10%;
         }
 
         navbar-link {
@@ -296,7 +296,7 @@ padding: 25px;
       @media screen and (max-width: 360px) {
         navbar-link {
           color: rgb(44, 45, 46);
-          margin: 0 10px;
+          
           cursor: pointer;
           text-decoration:none;
           font-weight: 600;
@@ -315,7 +315,7 @@ padding: 25px;
           position: relative;
           width: 100%; /* Adjust size as needed */
           height: 80%;
-         left:290%;
+         left:230%;
 
         }
       }
