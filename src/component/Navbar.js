@@ -7,6 +7,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import CheckIcon from "@mui/icons-material/Check";
 import UserContext from "./UserContext";
+import getUser from "../store/userSlice";
 
 const Navbar = () => {
  
@@ -94,10 +95,16 @@ const handleSearch=()=>{
     </div>
         
         
-
-        <Link to="/login" className="navbar-link">
+      {
+        !getUser ?(
+          <Link to="/login" className="navbar-link">
           Login
-        </Link>
+        </Link> 
+        ):      <Link to="/login" className="navbar-link">
+        LogOut
+      </Link>   
+      }
+        
         <Link to="/signup" className="navbar-link">
           Signup
         </Link>
