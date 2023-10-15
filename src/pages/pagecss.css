@@ -766,13 +766,7 @@ position: relative;
 
 
 
-.social-icons a {
-  background-color: #f32c6e;
-  margin-right: 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
+
 
 .footer-text {
   flex: 1;
@@ -786,10 +780,15 @@ position: relative;
 .footer-text p {
   margin-bottom: 5px;
 }
-@media screen and (max-width: 490px) {
-    
+@media screen and (max-width: 360px) {
   .footer{
     width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+    
+  .footer{
+    width: 200%;
   }
     
   }
@@ -797,8 +796,24 @@ position: relative;
   @media screen and (max-width: 590px) {
     
     .footer{
-      width: 100%;
+      width: 250%;
     }
       
     }
+    @media screen and (max-width: 1023px) {
+    
+      .footer{
+        width: 100%;
+      }
+        
+      }
+
+      @media screen and (max-width: 560px) {
+    
+        .footer{
+          width: 100%;
+        }
+          
+        }
+    
   
