@@ -95,16 +95,16 @@ const handleSearch=()=>{
     </div>
         
         
-      {
-        !getUser ?(
-          <Link to="/login" className="navbar-link">
-          Login
-        </Link> 
-        ):      <Link to="/login" className="navbar-link">
-        LogOut
-      </Link>   
-      }
-        
+
+    {
+      !getUser ?(
+        <Link to="/login" className="navbar-link">
+        Login
+      </Link> 
+      ):      <Link to="/login" className="navbar-link">
+      LogOut
+    </Link>   
+    }
         <Link to="/signup" className="navbar-link">
           Signup
         </Link>
